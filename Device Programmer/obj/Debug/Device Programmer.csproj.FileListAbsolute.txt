@@ -1,0 +1,13 @@
+C:\Users\crigney\Documents\Visual Studio 2012\Projects\Device Programmer\Device Programmer\bin\Device Programmer.dll
+C:\Users\crigney\Documents\Visual Studio 2012\Projects\Device Programmer\Device Programmer\bin\Device Programmer.pdb
+C:\Users\crigney\Documents\Visual Studio 2012\Projects\Device Programmer\Device Programmer\obj\Debug\Device Programmer.csprojResolveAssemblyReference.cache
+C:\Users\crigney\Documents\Visual Studio 2012\Projects\Device Programmer\Device Programmer\obj\Debug\Device Programmer.dll
+C:\Users\crigney\Documents\Visual Studio 2012\Projects\Device Programmer\Device Programmer\obj\Debug\Device Programmer.pdb
+C:\Users\crigney\Documents\Visual Studio 2012\Projects\Device Programmer\Device Programmer\bin\Newtonsoft.Json.dll
+C:\Users\crigney\Documents\Visual Studio 2012\Projects\Device Programmer\Device Programmer\bin\System.Net.Http.Formatting.dll
+C:\Users\crigney\Documents\Visual Studio 2012\Projects\Device Programmer\Device Programmer\bin\System.Web.Http.dll
+C:\Users\crigney\Documents\Visual Studio 2012\Projects\Device Programmer\Device Programmer\bin\System.Web.Http.WebHost.dll
+C:\Users\crigney\Documents\Visual Studio 2012\Projects\Device Programmer\Device Programmer\bin\Newtonsoft.Json.xml
+C:\Users\crigney\Documents\Visual Studio 2012\Projects\Device Programmer\Device Programmer\bin\System.Net.Http.Formatting.xml
+C:\Users\crigney\Documents\Visual Studio 2012\Projects\Device Programmer\Device Programmer\bin\System.Web.Http.xml
+C:\Users\crigney\Documents\Visual Studio 2012\Projects\Device Programmer\Device Programmer\bin\System.Web.Http.WebHost.xml
