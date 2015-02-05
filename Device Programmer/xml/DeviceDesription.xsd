@@ -1,0 +1,51 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:schemas-upnp-org:device-1-0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="specVersion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:byte" name="major"/>
+              <xs:element type="xs:byte" name="minor"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="device">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="deviceType"/>
+              <xs:element type="xs:string" name="friendlyName"/>
+              <xs:element type="xs:string" name="manufacturer"/>
+              <xs:element type="xs:anyURI" name="manufacturerURL"/>
+              <xs:element type="xs:string" name="modelDescription"/>
+              <xs:element type="xs:string" name="modelName"/>
+              <xs:element type="xs:float" name="modelNumber"/>
+              <xs:element type="xs:anyURI" name="modelURL"/>
+              <xs:element type="xs:long" name="serialNumber"/>
+              <xs:element type="xs:string" name="UDN"/>
+              <xs:element type="xs:int" name="UPC"/>
+              <xs:element name="serviceList">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="service" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="serviceType"/>
+                          <xs:element type="xs:string" name="serviceId"/>
+                          <xs:element type="xs:string" name="controlURL"/>
+                          <xs:element type="xs:string" name="eventSubURL"/>
+                          <xs:element type="xs:string" name="SCPDURL"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="presentationURL"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

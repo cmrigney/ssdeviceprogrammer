@@ -26,9 +26,22 @@
         <div class="panel-body">
             <form class="form-horizontal">
                 <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <button type="submit" class="btn btn-danger" data-bind="click: getDeviceInfo">Get Device Info</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
                     <label for="DeviceName" class="col-md-2 control-label">Device Name</label>
                     <div class="col-md-10">
                         <input id="DeviceName" type="text" class="form-control" placeholder="Shop" data-bind="value: deviceName" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="DeviceName" class="col-md-2 control-label">Current IP Address</label>
+                    <div class="col-md-10">
+                        <input id="CurrentIP" type="text" class="form-control" placeholder="Enter Current IP" data-bind="value: currentIPAddress" />
                     </div>
                 </div>
 

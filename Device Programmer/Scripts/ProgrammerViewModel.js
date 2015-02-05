@@ -1,6 +1,7 @@
 ﻿var ProgrammerViewModel = function () {
     var self = this;
 
+    self.currentIPAddress = ko.observable();
     self.deviceName = ko.observable();
     self.useDHCP = ko.observable(false);
     self.staticIp = ko.observable();
@@ -8,11 +9,26 @@
     self.netmask = ko.observable();
     self.dns = ko.observable();
 
+    self.getDeviceInfo = function () {
+        $.getJSON('api/Programmer?currentIp=' + self.currentIPAddress()).done(function (msg) {
+            console.log(msg);
+        });
+    }
+
     self.programDevice = function () {
         $.ajax({
             type: 'POST',
             url: 'api/Programmer',
-            data: { deviceName: self.deviceName },
+            data: {
+                deviceName: self.deviceName,
+                currentIPAddress: self.currentIPAddress,
+                enableDHCP: self.useDHCP,
+                deviceProgrammedIP: self.staticIp,
+                gateway: self.gateway,
+                netMask: self.netmask,
+                dns: self.dns,
+                programmedBy: 'jdrokin'
+            },
             dataType: 'json'
         }).done(function (msg) {
             console.log(msg);
