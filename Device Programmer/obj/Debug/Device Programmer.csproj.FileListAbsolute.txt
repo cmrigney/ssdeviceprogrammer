@@ -20,6 +20,5 @@ C:\ssdeviceprogrammer\Device Programmer\bin\System.Web.Http.WebHost.dll
 C:\ssdeviceprogrammer\Device Programmer\bin\System.Net.Http.Formatting.xml
 C:\ssdeviceprogrammer\Device Programmer\bin\System.Web.Http.xml
 C:\ssdeviceprogrammer\Device Programmer\bin\System.Web.Http.WebHost.xml
-C:\ssdeviceprogrammer\Device Programmer\obj\Debug\Device Programmer.csprojResolveAssemblyReference.cache
 C:\ssdeviceprogrammer\Device Programmer\obj\Debug\Device Programmer.dll
 C:\ssdeviceprogrammer\Device Programmer\obj\Debug\Device Programmer.pdb

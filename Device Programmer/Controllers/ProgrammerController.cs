@@ -48,23 +48,36 @@ namespace Device_Programmer
                 client.BaseAddress = new Uri("http://" + settings.CurrentIpAddress);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                StringBuilder sb = new StringBuilder();
-                sb.Append("/cgi-bin/http.cgi?network:set&");
-                sb.Append(settings.EnableDHCP.ToString());
-                sb.Append('&');
-                sb.Append(settings.DeviceProgrammedIP);
-                sb.Append('&');
-                sb.Append(settings.Gateway);
-                sb.Append('&');
-                sb.Append(settings.NetMask);
-                sb.Append('&');
-                sb.Append(settings.DNS);
 
-                HttpResponseMessage response = await client.GetAsync(sb.ToString());
+                HttpResponseMessage response = await client.GetAsync("/cgi-bin/http.cgi?getMAC");
                 if (response.IsSuccessStatusCode)
                 {
-                    return Request.CreateResponse(HttpStatusCode.OK, "Device Programmed Successfully.");
+                    string result = await response.Content.ReadAsStringAsync();
+                    result = result.Replace("\n", "");
+                    bool isMacAtIp = await DeviceListener.MACFoundAtIpAsync(settings.DeviceProgrammedIP, result);
+                    return Request.CreateResponse(HttpStatusCode.OK, isMacAtIp);
                 }
+
+
+                //StringBuilder sb = new StringBuilder();
+                //sb.Append("/cgi-bin/http.cgi?network:set&");
+                //sb.Append(settings.EnableDHCP.ToString());
+                //sb.Append('&');
+                //sb.Append(settings.DeviceProgrammedIP);
+                //sb.Append('&');
+                //sb.Append(settings.Gateway);
+                //sb.Append('&');
+                //sb.Append(settings.NetMask);
+                //sb.Append('&');
+                //sb.Append(settings.DNS);
+
+                //HttpResponseMessage response = await client.GetAsync(sb.ToString());
+                //if (response.IsSuccessStatusCode)
+                //{
+                //    await DeviceListener.WaitForDeviceOfflineAsync(settings.CurrentIpAddress);
+
+                //    return Request.CreateResponse(HttpStatusCode.OK, "Device Programmed Successfully.");
+                //}
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Unable to Program Sensor.");
             }
     }

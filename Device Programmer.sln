@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.22129.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Device Programmer", "Device Programmer\Device Programmer.csproj", "{B507A065-13B0-4081-B88F-0CAF3FBCE916}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerPortal", "CustomerPortal\CustomerPortal.csproj", "{89C29009-6D0A-45B7-A0A6-D41DB8971704}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +17,10 @@ Global
 		{B507A065-13B0-4081-B88F-0CAF3FBCE916}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B507A065-13B0-4081-B88F-0CAF3FBCE916}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B507A065-13B0-4081-B88F-0CAF3FBCE916}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89C29009-6D0A-45B7-A0A6-D41DB8971704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89C29009-6D0A-45B7-A0A6-D41DB8971704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89C29009-6D0A-45B7-A0A6-D41DB8971704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89C29009-6D0A-45B7-A0A6-D41DB8971704}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

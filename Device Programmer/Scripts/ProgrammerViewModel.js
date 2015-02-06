@@ -10,7 +10,13 @@
     self.dns = ko.observable();
 
     self.getDeviceInfo = function () {
-        $.getJSON('api/Programmer?currentIp=' + self.currentIPAddress()).done(function (msg) {
+        $.getJSON('api/Programmer?currentIP=' + self.currentIPAddress()).done(function (msg) {
+            console.log(msg);
+        });
+    }
+
+    self.getDeviceIPByMac = function () {
+        $.getJSON('api/Programmer?currentMAC=' + self.currentMAC()).done(function (msg) {
             console.log(msg);
         });
     }
